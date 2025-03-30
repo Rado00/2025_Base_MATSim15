@@ -1,0 +1,5 @@
+2022-10-31T10:33:39,273  WARN XY2LinksForFacilities:50 There is no link for at least a facility. Assigning links for such facilities from coords.
+2022-10-31T10:33:39,274  WARN XY2LinksForFacilities:51  This message given only once.
+2022-10-31T10:33:39,408  WARN PrepareForSimImpl:222 'usePersonIdForMissingVehicleId' is deprecated. It will be removed soon.
+2022-10-31T10:33:40,072  WARN PreProcessEuclidean:59 There are links with stored length smaller than their Euclidean distance in this network. Thus, A* cannot guarantee to calculate the least-cost paths between two nodes.
+2022-10-31T10:33:40,121  WARN PreProcessEuclidean:59 There are links with stored length smaller than their Euclidean distance in this network. Thus, A* cannot guarantee to calculate the least-cost paths between two nodes.

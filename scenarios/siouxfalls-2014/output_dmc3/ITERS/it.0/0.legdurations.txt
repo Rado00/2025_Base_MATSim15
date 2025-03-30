@@ -1,0 +1,14 @@
+pattern	0+	5+	10+	15+	20+	25+	30+	35+	40+	45+	50+	55+	60+
+home---pt interaction	1277	4437	2797	2635	1628	1201	776	529	336	112	144	24	7
+home---secondary	164	44	101	156	155	148	122	125	104	52	42	27	77
+home---work	5293	5613	2116	1271	712	763	873	268	151	114	49	69	567
+pt interaction---home	2	0	0	2	4	0	0	0	0	0	0	0	0
+pt interaction---pt interaction	837	1149	144	67	84	13	12	5	1	2	0	3	412
+pt interaction---secondary	32	48	39	28	21	31	5	0	1	0	0	0	0
+pt interaction---work	368	544	360	247	219	176	55	2	0	2	1	0	0
+secondary---home	9	32	85	138	136	138	109	115	93	50	37	18	31
+secondary---pt interaction	62	66	52	35	30	39	8	1	1	1	1	0	0
+work---home	53	42	125	143	215	174	175	127	107	92	34	54	134
+work---pt interaction	392	558	372	241	235	192	59	1	0	3	1	0	0
+
+average trip duration: 1595.8362009328066 seconds = 00:26:35
