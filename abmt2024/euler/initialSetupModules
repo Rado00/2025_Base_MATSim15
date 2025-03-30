@@ -1,0 +1,8 @@
+#Run the below comand on your shell to get started with creating the JAR file after cloning
+#when submitting a job, the job script should have the modules need on it as in runZurich.sh
+#Run the job script using bash. i.e on your shell: bash runZurich.sh
+
+module load stack/2024-06 
+module load gcc/12.2.0
+module load openjdk/17.0.8.1_1
+module load maven

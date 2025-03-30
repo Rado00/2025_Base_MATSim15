@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.eth</groupId>
+    <artifactId>abmt2024</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+
+  <repositories>
+    <repository>
+      <id>matsim</id>
+      <name>MATSim Maven repository</name>
+      <url>https://repo.matsim.org/repository/matsim/</url>
+    </repository>
+
+    <repository>
+      <id>eqasim</id>
+      <url>https://packagecloud.io/eth-ivt/eqasim/maven2</url>
+    </repository>
+
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+  </repository>
+
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.matsim</groupId>
+      <artifactId>matsim</artifactId>
+      <version>2025.0-PR3223</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.github.eqasim-org.eqasim-java</groupId>
+      <artifactId>core</artifactId>
+      <version>ad293ff</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.eqasim-org.eqasim-java</groupId>
+      <artifactId>switzerland</artifactId>
+      <version>ad293ff</version>
+    </dependency>
+    <dependency>
+      <groupId>org.matsim.contrib</groupId>
+      <artifactId>drt</artifactId>
+      <version>2025.0-PR3223</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.2.4</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                    <configuration>
+                      <transformers>
+                        <transformer
+                          implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+                        <transformer
+                          implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                          <manifestEntries>
+                            <Implementation-Vendor>Eqasim</Implementation-Vendor>
+                            <Implementation-Version>
+                              ${parent.groupId}</Implementation-Version>
+                          </manifestEntries>
+                        </transformer>
+                    </transformers>
+                      <filters>
+                        <filter>
+                          <artifact>*:*</artifact>
+                          <excludes>
+                            <exclude>META-INF/*.SF</exclude>
+                            <exclude>META-INF/*.DSA</exclude>
+                            <exclude>META-INF/*.RSA</exclude>
+                          </excludes>
+                        </filter>
+                      </filters>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+       
+</project>
+
